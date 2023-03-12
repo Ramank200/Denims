@@ -1,0 +1,150 @@
+.Varities {
+    padding: 4vh 0;
+    margin: 4vh 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Card_Holder {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Varity_Left,
+.Varity_Right {
+    flex-basis: 300px;
+    flex-grow: 1;
+}
+
+.Card_Groups {
+    aspect-ratio: 3/5;
+    width: 200px;
+}
+
+.Card_group {
+    /* position: absolute; */
+    position: relative;
+    transition: transform 400ms;
+}
+
+.Card_group:nth-child(1) .BCard{
+    background: url("https://cdn07.nnnow.com/web-images/large/styles/62DCNC4IFCE/1666781583713/5.jpg");
+    /* background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0yTdgy6-iXhxOWL-fuuIomN00D3Ap0_Xj28Narcl_Qfg7e_T42DIQcfn56jYBtIqStfs&usqp=CAU"); */
+    background-size: cover;
+}
+
+.Card_group:nth-child(2) .BCard{
+    background: url("https://i.pinimg.com/originals/dc/fd/00/dcfd0037aa8b858cbb14c285fa42aa7f.jpg");
+    /* background: url("https://cdn.shopify.com/s/files/1/0293/9277/products/DenimCutieJumpsuit-DarkWash_MER_468x.jpg?v=1600797068"); */
+    background-size: cover;
+}
+
+.Card_group:nth-child(3) .BCard{
+    background: url("https://i.pinimg.com/736x/0c/3c/df/0c3cdfed5f0102e39fd3aa4f5dfc9b2a.jpg");
+    background-size: cover;
+}
+
+.BCard {
+    position: absolute;
+    aspect-ratio: 3/5;
+    width: 200px;
+    /* background-color: rgba(255, 255, 255, 0.348); */
+    /* background: url(); */
+    border-radius: 10px;
+    border: solid 2px rgba(255, 255, 255, 0.778);
+    transition: transform 500ms cubic-bezier(.05, .43, .25, .93);
+    cursor: pointer;
+}
+
+.BCard:nth-child(4) {
+    transform: translate(10%, 3%) rotateZ(3deg);
+}
+
+.BCard:nth-child(3) {
+    transform: translate(4%, 1%) rotateZ(1deg);
+}
+
+.BCard:nth-child(2) {
+    transform: translate(-4%, 1%) rotateZ(-1deg);
+}
+
+.BCard:nth-child(1) {
+    transform: translate(-10%, 3%) rotateZ(-3deg);
+}
+
+.Card_group:hover>.BCard:nth-child(4) {
+    transform: translate(120%, 10%) rotateZ(15deg);
+}
+
+.Card_group:hover>.BCard:nth-child(3) {
+    transform: translate(40%, 2%) rotateZ(5deg);
+}
+
+.Card_group:hover>.BCard:nth-child(2) {
+    transform: translate(-40%, 2%) rotateZ(-5deg);
+}
+
+.Card_group:hover>.BCard:nth-child(1) {
+    transform: translate(-120%, 10%) rotateZ(-15deg);
+}
+
+.Card_group[data-status="unactive"] {
+    transform: scale(0);
+}
+
+.Card_group[data-status="active"] {
+    transition-delay: 100ms;
+}
+
+.Card_group[data-status="after"] {
+    transform: translate(70%, -90%) scale(0);
+    transition: transform 400ms;
+}
+
+.Card_group[data-status="before"] {
+    transform: translate(-70%, -90%) scale(0);
+    transition: transform 400ms;
+}
+
+.Card_group[data-status="become-active-after-before"] {
+    transform: translate(-100%, -90%) scale(0);
+    transition: none;
+}
+
+.Card_group[data-status="become-unactive-after-active"] {
+    transform: translate(100%, -90%) scale(0);
+    transition: none;
+}
+
+.Card_Button {
+    color: rgba(255, 255, 255, 0.793);
+    border: solid 4px rgba(255, 255, 255, 0.793);
+    aspect-ratio: 1;
+    font-size: 1.3rem;
+    width: 40px;
+    margin: 10px;
+    padding: 5px;
+    cursor: pointer;
+    background: none;
+    border-radius: 50%;
+}
+
+.Varities_Title {
+    font-size: 2rem;
+    font-family: 'Rampart One', cursive;
+}
+
+.Varity_Right img {
+    object-fit: contain;
+    border-top: solid 2px white;
+    border-bottom: solid 2px blue;
+}
+
+
+.Memories {
+    font-size: 3rem;
+    font-family: 'Splash', cursive;
+}

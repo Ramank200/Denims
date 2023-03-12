@@ -1,0 +1,61 @@
+.Footer{
+    background: #05122dad url("https://images.pexels.com/photos/235525/pexels-photo-235525.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-blend-mode: overlay;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    color: white;
+    text-align: justify;
+    padding: 10vh 0 4vh 0 ;
+}
+.Footer a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    /* padding: 1.5rem 0; */
+}
+
+.Left_left{
+    flex-basis: 230px;
+    flex-grow: 0.4;
+    font-family: 'Splash', cursive;
+    transform: rotateZ(-10deg);
+    font-size: 6rem;
+    text-align: center;
+    font-weight: 600;
+    margin: 10px;
+    padding: 0;
+    padding: 2rem;
+    position:relative;
+    transition: text-shadow 0.3s ease-in;
+    cursor: pointer;
+}
+
+.Catch_us{
+    font-size: 1.4rem;
+    margin: 1rem 0;
+}
+
+.Left_left:hover{
+    text-shadow: 2px 2px 0px black,
+    -2px -2px 0px black, 2px 2px 10px white,-2px -2px 10px white;
+}
+
+.Footer_Left{
+    flex-basis: 250px;
+    flex-grow: 0.5;
+    padding: 2rem;
+    border-left: solid 1px white;
+}
+
+.Footer_Mid{
+    flex-basis: 200px;
+    padding: 2rem;
+    flex-grow: 0.5;
+    border-left: solid 1px white;
+}
+
+.Footer_Heads{
+    font-size: 2.5rem;
+    margin: 1rem 0;
+}

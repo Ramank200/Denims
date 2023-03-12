@@ -1,0 +1,65 @@
+.Manufacture{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.284);
+    padding: 4vh 0 0 0;
+}
+
+.Manufacture_Left , .Manufacture_Right{
+    flex-basis: 350px;
+    flex-grow: 0.5;
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+
+.Manufacture_Mid{
+    padding: 4vh 2vw;
+    flex-basis: 400px;
+    flex-grow: 1;
+}
+
+.Manufacture_Left svg ,.Manufacture_Right svg{
+    z-index: -1;
+    position: absolute;
+}
+
+.Manufacture_Left img{
+    transform: rotateY(180deg);
+}
+
+.Manufacture_Right img{
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+    color: #2F5233;
+}
+
+.Manufacture_Left svg{
+    left: -73%;
+    top: -28%;
+}
+.Manufacture_Right svg{
+    left: -60%;
+    top: 20%;
+}
+.Heading{
+    font-family: 'Rampart One', cursive;
+    font-size: 4rem;
+    margin: 15px 0;
+    border-bottom: solid 1px white;
+}
+
+.Manufacture_Mid{
+    font-size: 1.25rem;
+    text-align: justify;
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
+    border-left: solid 2px white;
+    word-spacing: 5px;
+}

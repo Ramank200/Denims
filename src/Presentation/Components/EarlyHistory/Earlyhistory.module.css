@@ -1,0 +1,42 @@
+.Earlyhistory{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2vh 4vw;
+    height: 101vh;
+}
+
+.Earlyhistory_left{
+    flex-basis: 300px;
+    flex-grow: 0.5;
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.Earlyhistory_right{
+    flex-basis: 400px;
+    flex-grow: 1;
+    padding: 2% 6%;
+    text-align: justify;
+    font-size: 1.4rem;
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
+    border-left: solid 2px white;
+}
+
+.Heading{
+    font-family: 'Rampart One', cursive;
+    font-size: 4rem;
+    margin: 15px 0;
+    border-bottom: solid 1px white;
+}
+
+.Earlyhistory_left svg{
+    position: absolute;
+    top: 12%;
+    z-index: -1;
+}

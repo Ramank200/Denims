@@ -1,0 +1,75 @@
+.Navbar{
+    gap: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: stretch;
+    background: linear-gradient(rgba(4, 4, 91, 0.756),rgba(0, 0, 255, 0.121));
+    position: fixed;
+    width: 100vw;
+    top: 0%;
+    z-index: 10;
+}
+
+.Nav_Head , .Nav_Foot{
+    flex-basis: 200px;
+    flex-grow: 0.5;
+}
+
+.Navbar a{
+   text-decoration: none;
+   color: white;
+}
+
+.Nav_Body{
+    flex-grow: 1;
+    display: flex;
+    flex-basis: 500px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.Menu_item{
+    font-weight: 600;
+    font-size: 1.5rem;
+    padding: 5px 20px;
+    cursor: pointer;
+    transition: all 0.4s ease-in;
+    position: relative;
+}
+
+.Menu_item::after{
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: white;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.2s ease-out;
+}
+
+.Menu_item:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.Denim{
+    font-family: 'Splash', cursive;
+    transform: rotateZ(-10deg);
+    font-size: 3rem;
+    font-weight: 600;
+    margin: 10px;
+    padding: 0;
+    position:relative;
+    transition: text-shadow 0.3s ease-in;
+    cursor: pointer;
+}
+
+.Denim:hover{
+    text-shadow: 2px 2px 0px black,
+    -2px -2px 0px black, 2px 2px 10px white,-2px -2px 10px white;
+}
+
+

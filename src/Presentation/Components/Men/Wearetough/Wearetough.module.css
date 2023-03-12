@@ -1,0 +1,32 @@
+.Wearetough{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2vw;
+    text-align: justify;
+    gap: 1rem;
+    height: 100vh;
+}
+
+.Wearetough_Left{
+    filter: drop-shadow(3px 3px 0px white);
+}
+
+.Weare_Heading{
+    font-size: 3rem;
+    font-family: 'Rampart One', cursive;
+    border-bottom: solid  2px white;
+}
+
+.Wearetough_Right_Text{
+    font-size: 1.7rem;
+}
+
+.Wearetough_Right{
+    flex-grow: 1;
+    font-size: 1.7rem;
+    padding: 2% 6%;
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
+    border-left: solid 2px white ;
+}
