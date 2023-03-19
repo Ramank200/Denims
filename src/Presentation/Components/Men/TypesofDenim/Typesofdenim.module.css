@@ -1,0 +1,138 @@
+.Typesofdenim{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(0, 0, 255, 0),rgba(0, 0, 255, 0.273),rgba(0, 0, 255, 0));
+}
+
+.Holder{
+    position: relative;
+    width: 50%;
+    height: 60%;
+    isolation: isolate;
+    margin: 2vh 2vw;
+    border: solid 12px white;
+    background: linear-gradient(rgba(0, 0, 255, 0),rgba(255, 0, 0, 0.315),rgba(0, 0, 255, 0));
+}
+
+.Image_Wrapper, .Names_Wrapper{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+.Names_Wrapper .Name,.Names_Wrapper .Text_stro{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    font-size: 5rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    transition: transform 600ms;
+    /* text-stroke:2px white; */
+}
+
+.Text_stri{
+    z-index: -1;
+}
+
+.Text_stro{
+    z-index: 2;
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+}
+
+.Image_Wrapper img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    transition: transform 600ms;
+}
+
+.Image_Wrapper img[data-istatus="unactive"]{
+    transform: translate(-100%,0);
+}
+
+.Names_Wrapper div[data-nstatus="unactive"]{
+    transform: translate(100%,0);
+}
+
+.Image_Wrapper img[data-istatus="active"],.Names_Wrapper .Name[data-nstatus="active"]{
+    transition-delay: 0s;
+}
+
+.Image_Wrapper img[data-istatus="going_istale"]{
+  transform: translate(100%,0);
+  transition: transform 700ms;
+}
+
+.Names_Wrapper .Name[data-nstatus="going_nstale"]{
+    transform: translate(-100%,0);  
+    transition: transform 700ms;
+}
+.Image_Wrapper img[data-istatus="going_sistale"]{
+  transform: translate(-100%,0);
+  transition: transform 700ms;
+}
+
+.Names_Wrapper .Name[data-nstatus="going_snstale"]{
+    transform: translate(100%,0);
+    transition: transform 700ms;
+}
+
+.Image_Wrapper img[data-istatus="icominginview"]{
+    transform: translate(-100%,0);
+    transition: none;
+}
+
+.Names_Wrapper .Name[data-nstatus="ncominginview"]{
+    transform: translate(100%,0);
+    transition: none;
+}
+
+.Image_Wrapper img[data-istatus="igoinginview"]{
+    transform: translate(100%,0);
+    transition: none;
+}
+
+.Names_Wrapper .Name[data-nstatus="ngoinginview"]{
+    transform: translate(-100%,0);
+    transition: none;
+}
+
+.ArrowButtons{
+    background: none;
+    border: solid 1px white;
+    aspect-ratio: 1;
+    width: 100px;
+    position: relative;
+    border-radius: 50%;
+    color: white;
+    font-size: 2rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 2s;
+}
+
+.Front:hover{
+    justify-content: flex-end;
+}
+.Back:hover{
+    justify-content: flex-start;
+}

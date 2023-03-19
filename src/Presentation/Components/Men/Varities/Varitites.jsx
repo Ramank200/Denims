@@ -31,7 +31,7 @@ const Varitites = () => {
     setTimeout(() => {
       nextgroup.dataset.status = "active";
       setactiveIndex(nextIndex)
-    }, 100)
+    }, 10)
   }
 
   return (

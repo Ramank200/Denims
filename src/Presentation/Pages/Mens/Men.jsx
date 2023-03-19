@@ -3,6 +3,7 @@ import Footer from '../../Components/Footer/Footer'
 import Genintro from '../../Components/Men/GenIntro/Genintro'
 import Newstories from '../../Components/Men/Newstories/Newstories'
 import Personality from '../../Components/Men/Personality/Personality'
+import Typesfdenim from '../../Components/Men/TypesofDenim/Typesfdenim'
 import Varitites from '../../Components/Men/Varities/Varitites'
 import Wearetough from '../../Components/Men/Wearetough/Wearetough'
 import style from "./Men.module.css"
@@ -15,6 +16,7 @@ const Men = () => {
         <Personality />
         <Varitites/>
         <Newstories/>
+        <Typesfdenim/>
         <Footer/>
     </div>
     )

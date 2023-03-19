@@ -3,17 +3,13 @@
     display: flex;
     align-items: center;
     justify-content: stretch;
-    background: linear-gradient(rgba(4, 4, 91, 0.756),rgba(0, 0, 255, 0.121));
+    background: linear-gradient(rgb(0 0 44),rgb(1 1 60 / 70%),rgb(1 1 60 / 20%));
     position: fixed;
     width: 100vw;
     top: 0%;
     z-index: 10;
 }
 
-.Nav_Head , .Nav_Foot{
-    flex-basis: 200px;
-    flex-grow: 0.5;
-}
 
 .Navbar a{
    text-decoration: none;
@@ -29,8 +25,8 @@
 }
 
 .Menu_item{
-    font-weight: 600;
-    font-size: 1.5rem;
+    font-weight: 300;
+    font-size: 1.8rem;
     padding: 5px 20px;
     cursor: pointer;
     transition: all 0.4s ease-in;
@@ -58,7 +54,7 @@
 .Denim{
     font-family: 'Splash', cursive;
     transform: rotateZ(-10deg);
-    font-size: 3rem;
+    font-size: 3.4rem;
     font-weight: 600;
     margin: 10px;
     padding: 0;

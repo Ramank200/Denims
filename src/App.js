@@ -5,6 +5,7 @@ import History from './Presentation/Pages/History/History';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './Presentation/Components/Navbar/Navbar';
 import Men from './Presentation/Pages/Mens/Men';
+import Contact from './Presentation/Pages/Contact/Contact';
 
 function App() {
   return (
@@ -14,7 +15,8 @@ function App() {
         <Routes>
           <Route path={"/"} element={<Homepage />} />
           <Route path={"/history"} element={<History />} />
-          <Route path={"/men"} element={<Men />} />
+          <Route path={"/fashion"} element={<Men />} />
+          <Route path={'/contact'} element={<Contact />} />
         </Routes>
       </BrowserRouter>
     </div>
