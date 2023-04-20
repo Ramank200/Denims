@@ -13,9 +13,11 @@ const Contact = () => {
   const Submitit = () => {
     let x=document.getElementsByClassName('Sendbutton')[0];
     if (activated === 4) {
+      let elem = document.getElementsByClassName('progress')[3];
+      elem.innerHTML="T"
       const el = document.getElementsByClassName("progress")
       for (let i = 0; i < el.length; i++) {
-        el[i].style.textShadow="2px 2px 0px black, -2px -2px 0px black, 2px 2px 10px white , -2px -2px 10px white";
+        el[i].dataset.shadow="Shadow";
       }
       setForm({
         name: "",
@@ -23,8 +25,16 @@ const Contact = () => {
         email: "",
         suggestion: ""
       })
+      setTimeout(() => {
+       elem.innerHTML="D"
+       for (let i = 0; i < el.length; i++) {
+        el[i].dataset.shadow="NoShadow";
+        el[i].dataset.status="need"
+      }
+      }, 3000);
     }
-    x.style.textShadow="none"
+    // x.style.textShadow="none"
+    
   }
 
   const Handleform = (e) => {
@@ -87,10 +97,10 @@ const Contact = () => {
       <div className={`${style.Send_Button} Sendbutton`} onClick={()=>{
         Submitit();
       }}>
-        <div className={`${style.sent} progress`} data-status={"need"}>S</div>
-        <div className={`${style.sent} progress`} data-status={"need"}>E</div>
-        <div className={`${style.sent} progress`} data-status={"need"}>N</div>
-        <div className={`${style.sent} progress`} data-status={"need"}>T</div>
+        <div className={`${style.sent} progress`} data-shadow={"NoShadow"} data-status={"need"}>S</div>
+        <div className={`${style.sent} progress`} data-shadow={"NoShadow"} data-status={"need"}>E</div>
+        <div className={`${style.sent} progress`} data-shadow={"NoShadow"} data-status={"need"}>N</div>
+        <div className={`${style.sent} progress`} data-shadow={"NoShadow"} data-status={"need"}>D</div>
       </div>
     </div>
   </div>

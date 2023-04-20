@@ -95,6 +95,7 @@ input::-webkit-inner-spin-button, input::-webkit-outer-spin-button{
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
 .Send_Button div[data-status="need"]{
@@ -106,6 +107,10 @@ input::-webkit-inner-spin-button, input::-webkit-outer-spin-button{
     color: white;
 }
 
-.Send_Button div[data-status="activated"]{
-    color: white;
+.Send_Button div[data-shadow="Shadow"]{
+    text-shadow: 2px 2px 0px black, -2px -2px 0px black, 2px 2px 10px white , -2px -2px 10px white;
+}
+
+.Send_Button div[data-shadow="NoShadow"]{
+    text-shadow: none;
 }

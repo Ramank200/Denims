@@ -1,0 +1,117 @@
+.ProductDescription{
+    height:100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.737);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.Product_Card{
+    width: 70vw;
+    height: 70vh;
+    border: solid 4px white;
+    border-radius: 10px;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    position: relative;
+    top: 5vh;
+}
+
+.Product_Image, .Product_Info{
+    flex-basis: 270px;
+    flex-grow: 1;
+    text-align: justify;
+}
+
+.Product_Info{
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem 1.3rem 2rem 1.3rem;
+    border-left: solid 1px white;
+}
+
+.Product_Name{
+    font-size: 3rem;
+    font-family: 'Tilt Prism', cursive;
+}
+
+.Product_Price{
+    font-size: 2rem;
+}
+
+.Product_Description{
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 3px;
+}
+
+.Product_Buttons{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2rem;
+}
+
+.AddToCart, .Seemore{
+    padding: 4px 6px;
+    color: white;
+    font-size: 1rem;
+    background: none;
+    border: none;
+    font-weight: 100;
+    cursor: pointer;
+    font-family: 'Rampart One', cursive;
+}
+
+.Product_Image img{
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+}
+
+.Product_Buttons i, .Close i{
+    color: rgba(255, 255, 255, 0.433);
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    font-size: 2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.2rem;
+}
+
+.Close i{
+    color: #010a1b;
+    background-color: white;
+}
+
+.Close i:hover{
+    background-color: red;
+    color: white;
+}
+
+.Close{
+    position: absolute;
+    top: -4%;
+    right: -2%;
+}
+
+.Product_Buttons i[data-status="Heart"]{
+   color: red;
+}
+.Product_Buttons i[data-status="Cart"]{
+   color: indigo;
+}
+.Product_Buttons i[data-status="Show"]{
+   color: rgb(83, 83, 236);
+}

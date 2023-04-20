@@ -46,6 +46,22 @@
     background: url("https://i.pinimg.com/736x/0c/3c/df/0c3cdfed5f0102e39fd3aa4f5dfc9b2a.jpg");
     background-size: cover;
 }
+.Card_group:nth-child(4) .BCard{
+    background: url("http://www.justthedesign.com/wp-content/uploads/2015/03/Denim-On-Denim-Outfits6.jpg");
+    background-size: cover;
+}
+.Card_group:nth-child(5) .BCard{
+    background: url("https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/51-7Sq-wsqL._UL1024_.jpg");
+    background-size: cover;
+}
+.Card_group:nth-child(6) .BCard{
+    background: url("https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/61A8DQiXqsL._UX522_.jpg");
+    background-size: cover;
+}
+.Card_group:nth-child(7) .BCard{
+    background: url("https://i.pinimg.com/736x/b9/7f/1f/b97f1f5fe0598969f569fe803e222ca8.jpg");
+    background-size: cover;
+}
 
 .BCard {
     position: absolute;

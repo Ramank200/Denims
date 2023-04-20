@@ -54,18 +54,15 @@ const Varitites = () => {
               <div className={style.BCard}></div>
               <div className={style.BCard}></div>
             </div>
-            <div className={`${style.Card_group} Cardgroup`} data-index={1} data-status={"unactive"}>
+            
+            {
+              Array.from(Array(6)).map((elem,id)=>{
+               return <div className={`${style.Card_group} Cardgroup`} data-index={id+1} data-status={"unactive"}>
               <div className={style.BCard}></div>
               <div className={style.BCard}></div>
               <div className={style.BCard}></div>
               <div className={style.BCard}></div>
-            </div>
-            <div className={`${style.Card_group} Cardgroup`} data-index={2} data-status={"unactive"}>
-              <div className={style.BCard}></div>
-              <div className={style.BCard}></div>
-              <div className={style.BCard}></div>
-              <div className={style.BCard}></div>
-            </div>
+            </div>})} 
           </div>
         </div>
         <div>
