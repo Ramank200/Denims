@@ -9,15 +9,15 @@ const Products = () => {
   const [Navs, setNavs] = useRecoilState(Nav)
   const [Description, setDescription] = useState(false);
   const [Descript, setDescript] = useState({})
-  const [Data, setData] = useState(()=>{return data})
+  const [Data, setData] = useState(()=>{return [...data]})
   
-  const handleclick=(id,button)=>{
-    const  x = [...Data] 
-    console.log("equal",Data===x)
-    const p = x[id].i[button] 
-    console.log(p) 
-    x[id].i[button] = !p
-    console.log(x[id].i[button])
+  const handleclick=(id,button,value)=>{
+    let x = [...Data]
+    let y = {...Data[id]}
+    console.log(y)
+    y[button]=value
+    x[id]= y
+    console.log(x[id])
     setData(x)
   }
 
@@ -75,21 +75,28 @@ const Products = () => {
   })
   
   return (<>
-   {Description && <ProductDescription Closeit={closeit} data={Descript.i} Handleclick={handleclick}/>}
+   {Description && <ProductDescription Closeit={closeit} data={Descript} Handleclick={handleclick}/>}
 
     <div className={`${style.Products}  WindowScreen`}>
       <div className={`${style.Gallery_Products} Prods`}>
-        {Data.map((el, id) => {
-          return <div className={`${style.Sections} ${id % 3 === 0 ? style.BigBox : id % 3 === 2 ? style.FatBox : style.LongBox} `}
+        {Data?.map((el, id) => {
+          return<div className={`${style.Parent_card} ${id % 3 === 0 ? style.BigBox : id % 3 === 2 ? style.FatBox : style.LongBox}`}>
+            {(el.add || el.loved ||el.viewed) && <div className={style.Status_of_card}>
+            {el.loved && <i className="fa-solid fa-heart" data-prop={"loved"}></i>}
+            {el.add && <i className="fa-solid fa-cart-shopping" data-prop={"add"}></i>}
+            {el.viewed && <i className="fa-solid fa-eye"data-prop={"viewed"}></i>}
+            </div>}
+          <div className={`${style.Sections}`}
           onClick={(e)=>{
             setDescript(el)
             setDescription(true)
           }}
           >
             <div className={`${style.Card_Image} CardImag`} data-src={""}>
-              <img src={el.i.image} alt="" />
+              <img src={el.image} alt="" />
             </div>
           </div>
+            </div>
         })}
       </div>
     </div>

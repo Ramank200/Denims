@@ -49,12 +49,6 @@ const l = [
         description: "In addition to jeans, denim jackets and vests have become popular fashion staples, providing a versatile and on-trend addition to any outfit. These jackets and vests come in a variety of styles, from oversized to cropped to distressed, allowing women to express their personal style and preferences.denim have formed a strong relationship, with denim becoming a staple in the modern woman's wardrobe. Denim provides comfort, style, and versatility, making it a smart and fashionable choice for any occasion."
     },
     {
-        image: "https://i.pinimg.com/736x/b9/7f/1f/b97f1f5fe0598969f569fe803e222ca8.jpg",
-        name: "Strength",
-        price: "Suck his nipples",
-        description: "Damm he is hot sexy anf firey. Look at his chest all big and juicy wanna slap hi chest and rest down on it. Look at his arms feels like i wanna rip those mussles and devour them, damm the veins that pump his blood I wanna lick them. Dammm his SEXY niplles wanna suck them until they bleed and will drink blood too thide glitery and inviting nipples of him drices me crazy wanna scratch his abs so hard it leave mark on them and then bite his chest and suck the bloody nipples again .Damm wanna give him neck bites and suck his blood , Kiss him all over his face lips to lips kiss his nipples and suck them . Ho Hottie Love you"
-    },
-    {
         image: "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/61A8DQiXqsL._UX522_.jpg",
         name: "Denim Blazers",
         price: 400,
@@ -142,7 +136,7 @@ let data = [];
 for(let i=0;i<60;i++){
     let c = i>=l.length?l[Math.floor(Math.random()*l.length)]:l[i]
     let ids = stringGenerator();
-    c={i:{...c,loved:false,add:false,viewed:false,id:i,uid:ids}}
+    c={...c,loved:false,add:false,viewed:false,id:i,uid:ids}
     data.push(c)
 }
 

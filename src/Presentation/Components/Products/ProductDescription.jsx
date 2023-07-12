@@ -13,6 +13,7 @@ const ProductDescription = ({ data,Closeit,Handleclick }) => {
       x.animate({transform: 'scale(0)'}, {duration: 500, fill: 'forwards'})
       Closeit()
     }   
+    console.log(data)
     const {loved,viewed,add} = data
     const  [love, setlove] = useState(loved)
     const  [added, setadd] = useState(add)
@@ -35,8 +36,8 @@ const ProductDescription = ({ data,Closeit,Handleclick }) => {
                     </div>
                     <div className={style.Product_Description}> {data.description} </div>
                     <div className={style.Product_Buttons}>
-                        <i className="fa-solid fa-heart" data-status={love?"Heart":"unactive"} onClick={()=>{Handleclick(data.id,"loved"); setlove(!love)}}></i>
-                        <i className="fa-solid fa-cart-shopping" data-status={added?"Cart":"unactive"} onClick={()=>{Handleclick(data.id,"add");setadd(!added); 
+                        <i className="fa-solid fa-heart" data-status={love?"Heart":"unactive"} onClick={()=>{Handleclick(data.id,"loved",!love); setlove(!love)}}></i>
+                        <i className="fa-solid fa-cart-shopping" data-status={added?"Cart":"unactive"} onClick={()=>{Handleclick(data.id,"add",!added);setadd(!added); 
                         let x = [...products];
                         if(added){
 
@@ -52,7 +53,7 @@ const ProductDescription = ({ data,Closeit,Handleclick }) => {
                         }
                         setproducts(x)
                     }} ></i>
-                        <i className="fa-solid fa-eye" data-status={view?"Show":"unactive"} onClick={()=>{Handleclick(data.id,"viewed");setview(!view)}}></i>
+                        <i className="fa-solid fa-eye" data-status={view?"Show":"unactive"} onClick={()=>{Handleclick(data.id,"viewed",!view);setview(!view)}}></i>
                     </div>
                 </div>
             </div>
